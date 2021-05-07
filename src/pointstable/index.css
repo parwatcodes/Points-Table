@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.innerContainer {
+  padding-top: 80px;
+}
+
+.tablehead {
+  color: rgb(232 196 75);
+  background-color: rgb(141, 106, 125);
+  border: 1px solid black;
+}
+
+.teamhead {
+  padding: 4px 200px 4px 200px;
+  border: 1px solid black;
+
+}
+
+.otherhead {
+  padding: 4px 20px 4px 20px;
+  border: 1px solid black;
+}
+
+.otherheadwwcd {
+  padding: 4px 20px 4px 20px;
+}
+
+.overall {
+  font-size: 40px;
+  padding-left: 15px;
+  background-color: rgb(232 196 75);
+}
+
+.chickenImage {
+  height: 22px;
+  padding-left: 5px;
+}

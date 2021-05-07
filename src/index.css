@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Oswald&display=swap');
+
+body {
+  margin: 0;
+  background-color: #423e3e;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("../src/images/bg.jpg");
+}
