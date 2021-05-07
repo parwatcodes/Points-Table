@@ -3,6 +3,7 @@ import "./index.css";
 import IResponse from "./data.interface";
 import chickenImage from "../images/c.png";
 import pImage from "../images/PngItem_1219702.png";
+import vivoImage from "../images/vivo.jpg";
 
 interface IPoints {
   data: IResponse[];
@@ -22,6 +23,16 @@ const Points = (props: IPoints) => {
             height: "125px"
           }} src={pImage} />
         </div>
+        <div style={{
+          position: "absolute",
+          marginTop: "6px",
+          marginLeft: "764px"
+        }}>
+          <img style={{
+            height: "50px",
+            borderRadius: "5px"
+          }} src={vivoImage} />
+        </div>
         <div className="overall">OVERALL STANDINGS</div>
         <table style={{
           borderCollapse: "collapse"
@@ -35,7 +46,14 @@ const Points = (props: IPoints) => {
             <th className="otherhead">WWCD</th>
           </tr>
           {props.data.sort((x, y) => {
-            return y.totalpoints - x.totalpoints
+
+            if (y.totalpoints === x.totalpoints) {
+              console.log("==", y.totalpoints)
+              return y.killpoints - x.killpoints;
+             } else {
+               return y.totalpoints - x.totalpoints
+             }
+
           }).map((d, i) => {
             return (<tr className="tablehead">
               <td className="otherhead" style={{

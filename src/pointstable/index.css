@@ -34,6 +34,8 @@
   font-size: 40px;
   padding-left: 15px;
   background-color: rgb(232 196 75);
+  border: 1px solid black;
+  border-bottom: 0;
 }
 
 .chickenImage {
