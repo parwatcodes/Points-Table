@@ -33,6 +33,18 @@ const Points = (props: IPoints) => {
             borderRadius: "5px"
           }} src={vivoImage} />
         </div>
+        {!!props.data.find(d => {
+          return d.matchesplayed >= 1;
+        }) && <>
+            <div style={{
+              position: "absolute",
+              marginLeft: "537px",
+              fontSize: "35px",
+              marginTop: "4px"
+            }}>
+              POST MATCH {props.data.find(d => d.matchesplayed)?.matchesplayed}
+            </div>
+          </>}
         <div className="overall">OVERALL STANDINGS</div>
         <table style={{
           borderCollapse: "collapse"
@@ -48,11 +60,11 @@ const Points = (props: IPoints) => {
           {props.data.sort((x, y) => {
 
             if (y.totalpoints === x.totalpoints) {
-              console.log("==", y.totalpoints)
+              console.log("==", y.totalpoints);
               return y.killpoints - x.killpoints;
-             } else {
-               return y.totalpoints - x.totalpoints
-             }
+            } else {
+              return y.totalpoints - x.totalpoints;
+            }
 
           }).map((d, i) => {
             return (<tr className="tablehead">
