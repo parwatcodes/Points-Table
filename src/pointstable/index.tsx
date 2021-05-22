@@ -26,7 +26,7 @@ const Points = (props: IPoints) => {
         <div style={{
           position: "absolute",
           marginTop: "6px",
-          marginLeft: "764px"
+          marginLeft: "833px"
         }}>
           <img style={{
             height: "50px",
@@ -34,7 +34,7 @@ const Points = (props: IPoints) => {
           }} src={vivoImage} />
         </div>
         {!!props.data.find(d => {
-          return d.matchesplayed >= 1;
+          return d.postmatch >= 1;
         }) && <>
             <div style={{
               position: "absolute",
