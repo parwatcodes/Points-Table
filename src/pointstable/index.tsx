@@ -42,7 +42,7 @@ const Points = (props: IPoints) => {
               fontSize: "35px",
               marginTop: "4px"
             }}>
-              POST MATCH {props.data.find(d => d.matchesplayed)?.matchesplayed}
+              POST MATCH {props.data.find(d => d.postmatch)?.postmatch}
             </div>
           </>}
         <div className="overall">OVERALL STANDINGS</div>

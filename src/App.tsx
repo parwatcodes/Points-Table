@@ -15,13 +15,23 @@ function App() {
       setData(data.rows);
     }).catch(err => {
       console.log(err);
-    })
+    });
 
   }, []);
 
   return (
-      <>
-      <Points data={data1}/>
+    <>
+      <Points data={data1} />
+
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        textTransform: "none"
+      }}>
+        <p>Made with <span style={{
+          color: "red"
+        }}>❤</span> by ZWDxBejaan</p>
+      </div>
     </>
   );
 }
